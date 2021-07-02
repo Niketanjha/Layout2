@@ -97,6 +97,12 @@ button {
   color: black;
   margin-left: 4px;
 }
+.hrLine{
+  width:88%;
+  color: #c0c0c0;
+  margin-left:6%;
+  margin-top:30%;
+}
 
 /* .title {
   font-size: 25px;

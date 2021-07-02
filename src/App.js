@@ -24,7 +24,7 @@ class App extends React.Component{
           </ul>
         </div>   
 
-        <div>
+    <div>
       <div className="marginAll">
         <div className="firstText">
           <h1 className="sample" style={{fontFamily:'sans-serif',fontWeight:'200'}}>Sample heading</h1>
@@ -42,8 +42,8 @@ class App extends React.Component{
                 <div className="row">
                   <div className="column">
                     <div className="cards">
-                      <div className="imageClass" style={{fontSize:'larger'}}>
-                        <span >800X500</span>
+                      <div className="imageClass" style={{fontSize:'larger',display:"flex",justifyContent:"center",alignItems:"center"}}>
+                        <span style={{fontSize:"xx-large"}}>800X500</span>
                       </div>
                       <h3 style={{fontSize:"large",fontFamily:'sans-serif'}}>Feature Label</h3>
                       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -54,7 +54,7 @@ class App extends React.Component{
                 </div>
             )
         })}
-          <hr style={{width:'88%',color:'#c0c0c0',marginLeft:'6%',marginTop:"30%"}}></hr>
+          <hr className="hrLine"></hr>
           <p className="copyright"> Copyright @your Website 2014</p>
         </div>
       </div>
