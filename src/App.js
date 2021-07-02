@@ -27,7 +27,7 @@ class App extends React.Component{
     <div>
       <div className="marginAll">
         <div className="firstText">
-          <h1 className="sample" style={{fontFamily:'sans-serif',fontWeight:'200'}}>Sample heading</h1>
+          <h1 className="sample" style={{marginBottom:"0.1%", fontSize:"3em",fontFamily:'sans-serif',fontWeight:'200'}}>Sample Heading</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elt. lpsa, ipsam, eligendi, in quo sunt possimus non
             incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat. 
           </p>
@@ -47,7 +47,7 @@ class App extends React.Component{
                       </div>
                       <h3 style={{fontSize:"large",fontFamily:'sans-serif'}}>Feature Label</h3>
                       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                      <button className="buyNow">Buy now</button>
+                      <button className="buyNow">Buy now!</button>
                       <button className="moreInfo">More info</button>
                     </div>
                   </div>
@@ -55,7 +55,7 @@ class App extends React.Component{
             )
         })}
           <hr className="hrLine"></hr>
-          <p className="copyright"> Copyright @your Website 2014</p>
+          <p className="copyright"> Copyright &copy; Your Website 2014</p>
         </div>
       </div>
     );

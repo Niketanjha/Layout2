@@ -33,11 +33,11 @@ li a{
 
 .firstText {
   max-width: 1000px;
-  padding-top: 65px;
+  padding-top: 35px;
   font-size: large;
   font-weight: 100;
   font-family: sans-serif;
-  padding-left: 30px;
+  padding-left: 65px;
 }
 
 button {
@@ -71,7 +71,7 @@ button {
 }
 
 .cards {
-  border: 1px solid gray;
+  border: 0.1px solid #CCCCCC;
   padding: 4px;
   width: 85%;
   height: 50%;
