@@ -11,28 +11,58 @@ class App extends React.Component{
       {id:'4', item:''},
      ]};
   }
+  myFunction=()=> {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+    console.log(x);
+  }  
 
   render(){
     return(
       <div className="mainClass">
-        <div className="navBar">
+        <div className="topnav" id="myTopnav">
+          <a href="#home" className="active">Layout 3</a>
+          <a href="#news">About</a>
+          <a href="#contact">Services </a>
+          <a href="#about">Contact</a>
+          <a href="#"  className="icon" onClick={this.myFunction}>
+            <i className="fa fa-bars"></i>
+          </a>
+        </div>
+
+        {/* <div className="navBar">
           <ul id ="navList">
             <li ><a className="firstElement" href="#">Layout 3</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-        </div>   
+        </div>    */}
 
     <div>
       <div className="marginAll">
-        <div className="firstText">
-          <h1 className="sample" style={{marginBottom:"0.1%", fontSize:"3em",fontFamily:'sans-serif',fontWeight:'200'}}>Sample Heading</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elt. lpsa, ipsam, eligendi, in quo sunt possimus non
+        <HeadBar heading="Sample Heading"
+        text="Lorem ipsum dolor sit amet, consectetur adipisicing elt. lpsa, ipsam, eligendi, in quo sunt possimus non
+        incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat. "
+        buttonText="Call to action!" />
+        {/* <div className="firstText">
+          <span className="sample" >Sample Heading</span>
+          <p style={{fontWeight:"normal",fontFamily:"sans-serif"}}>Lorem ipsum dolor sit amet, consectetur adipisicing elt. lpsa, ipsam, eligendi, in quo sunt possimus non
             incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat. 
           </p>
-          <button>Call to action!</button>
-        </div>
+          <Button text="Call to action!"
+                  buttonBackground="#428BCA"
+                  color="white"
+                  borderRadius="3px"
+                  border="solid black 1px"
+                  width="130px"
+          />
+           <button className="buttCall">Call to action!</button> 
+        </div> */}
       </div>
       <div className="line">
         <div className="heading"><p>Latest Features</p></div>
@@ -43,12 +73,15 @@ class App extends React.Component{
                   <div className="column">
                     <div className="cards">
                       <div className="imageClass" style={{fontSize:'larger',display:"flex",justifyContent:"center",alignItems:"center"}}>
-                        <span style={{fontSize:"xx-large"}}>800X500</span>
+                        <span style={{color:"#A7A7A7",fontWeight:"bold" ,fontSize:"x-large"}}>800 x 500</span>
                       </div>
-                      <h3 style={{fontSize:"large",fontFamily:'sans-serif'}}>Feature Label</h3>
+                      <h3 style={{fontSize:"larger",fontFamily:'sans-serif'}}>Feature Label</h3>
                       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                      <button className="buyNow">Buy now!</button>
-                      <button className="moreInfo">More info</button>
+                      <Button text="Buy now!"  border="solid black 1px"/>
+                      <Button text="More info" border="solid black 1px" backgroundColor="white" 
+                              color="black"/>
+                      {/* <button className="buyNow">Buy now!</button>
+                      <button className="moreInfo">More info</button> */}
                     </div>
                   </div>
                 </div>
@@ -61,5 +94,44 @@ class App extends React.Component{
     );
   }
 }
+class Button extends React.Component{
+  render(){
+    const buttonBackground=this.props.backgroundColor;
+    return(
+      <>
+        <button style={{
+          backgroundColor:this.props.backgroundColor,
+          height:this.props.height,
+          width:this.props.width,
+          border:this.props.border,
+          borderRadius:this.props.borderRadius,
+          color:this.props.color
+          }}>{this.props.text}</button>
+      </>
+    );
+  }
+}
+class HeadBar extends React.Component{
+  render(){
+    {/*heading,, text, buttonText*/}
+    return(
+      <div className="firstText">
+        <span className="sample" >{this.props.heading}</span>
+        <p style={{fontWeight:"normal",
+        fontFamily:"sans-serif"}}>{this.props.text}
+        </p>
+        <Button text={this.props.buttonText}
+                buttonBackground="#428BCA"
+                color="white"
+                borderRadius="3px"
+                border="solid black 1px"
+                width="130px"
+        />
+        {/* <button className="buttCall">Call to action!</button> */}
+    </div>
+    );
+  }
+}
+
 
 export default App; 
