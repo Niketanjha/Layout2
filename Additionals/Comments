@@ -1,0 +1,62 @@
+{/* <div className="cards">
+                      <div className="imageClass" style={{fontSize:'larger',display:"flex",justifyContent:"center",alignItems:"center"}}>
+                        <span style={{color:"#A7A7A7",fontWeight:"bold" ,fontSize:"x-large"}}>800 x 500</span>
+                      </div>
+                      <h3 style={{fontSize:"larger",fontFamily:'sans-serif'}}>Feature Label</h3>
+                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <Button text="Buy now!"  border="solid black 1px"/>
+                      <Button text="More info" border="solid black 1px" backgroundColor="white" 
+                              color="black"/>
+                      {<button className="buyNow">Buy now!</button>
+                      <button className="moreInfo">More info</button> }
+                    </div> */}
+
+
+{/* <div className="firstText">
+          <span className="sample" >Sample Heading</span>
+          <p style={{fontWeight:"normal",fontFamily:"sans-serif"}}>Lorem ipsum dolor sit amet, consectetur adipisicing elt. lpsa, ipsam, eligendi, in quo sunt possimus non
+            incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat. 
+          </p>
+          <Button text="Call to action!"
+                  buttonBackground="#428BCA"
+                  color="white"
+                  borderRadius="3px"
+                  border="solid black 1px"
+                  width="130px"
+          />
+           <button className="buttCall">Call to action!</button> 
+        </div> */}
+
+
+        {/* <div className="navBar">
+          <ul id ="navList">
+            <li ><a className="firstElement" href="#">Layout 3</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>    */}
+
+
+
+
+        // myFunction=()=> {
+  //   var x = document.getElementById("myTopnav");
+  //   if (x.className === "topnav") {
+  //     x.className += " responsive";
+  //   } else {
+  //     x.className = "topnav";
+  //   }
+  //   console.log(x);
+  // }  
+
+
+          <div className="topnav" id="myTopnav">
+          <a href="#home" className="active">Layout 3</a>
+          <a href="#news">About</a>
+          <a href="#contact">Services </a>
+          <a href="#about">Contact</a>
+          <a href="#"  className="icon" onClick={this.myFunction}>
+            <i className="fa fa-bars"></i>
+          </a>
+        </div>
